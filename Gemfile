@@ -15,6 +15,13 @@ gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
 
+# Bootstrap
+gem 'sprockets-rails'
+gem 'jquery-rails'
+gem 'popper_js', '~> 1.9', '>= 1.9.9'
+gem 'tether-rails'
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
