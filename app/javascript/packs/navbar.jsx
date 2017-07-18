@@ -13,18 +13,12 @@ class NavBar extends React.Component {
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
-        <a className="navbar-brand" href="#">driftMaps</a>
+        <a className="navbar-brand" href="/">driftMap</a>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Link</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link disabled" href="#">Disabled</a>
+            <li className="nav-item" data-toggle="modal" data-target="#readme-modal">
+              <a className="nav-link" href="#">read me <span className="sr-only">(current)</span></a>
             </li>
           </ul>
         </div>
@@ -35,7 +29,6 @@ class NavBar extends React.Component {
 
 NavBar.defaultProps = {}
 NavBar.propTypes = {}
-
 
 
 document.addEventListener('DOMContentLoaded', ReactDOM.render(<NavBar />, document.getElementById('navbar-container')))
