@@ -1,0 +1,34 @@
+<% provide(:title, "log in") %>
+<div id="sessions_new" class="sessions">
+  <%= form_for :session, url: login_path do |f| %>
+    <h5>Sign in to driftMaps</h5>
+
+    <div class="form-group">
+      <%= f.label :email %>
+      <%= f.text_field :email, autofocus: true, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :password %> <span style="float:right">forgot password?</span>
+      <%= f.password_field :password, class: 'form-control' %>
+    </div>
+
+    <div class="form-check">
+      <label class="form-check-label" style="padding-left: 0">
+        <input type="checkbox" value="1" name="session[remember_me]" id="session_remember_me">
+        keep me signed in
+      </label>
+    </div>
+
+    <%= f.submit 'sign in', class: 'btn blue' %>
+  <% end %>
+
+  <div class="first-timer">
+    <p class="title">
+      First time here?
+      <a href="/signup">
+        sign up
+      </a>
+    </p>
+  </div>
+</div>

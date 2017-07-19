@@ -1,21 +1,27 @@
 /**
  * CONTENTS
  *
+ *   0. Style Manifest file
  *   A. Import Third Party fonts & Styles
  *   B. Eric Meyer Css Reset translated into Scss
  *   C. Fonts
  *   D. Forms
  *   E. Buttons
- *   G. Colors
+ *
 
  */
+
+/*------------------------------------*\
+         # 0. Custom Styles Manifest
+\*------------------------------------*/
+@import "sessions";
+@import "colors";
 
 /*------------------------------------*\
             # A. Third Party
 \*------------------------------------*/
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
-@import "colors";
 
 /*------------------------------------*\
             # B. Eric Meyer Reset
@@ -65,23 +71,26 @@ table {
           # C. Fonts
 \*------------------------------------*/
 
-p, span, a {
+p, span, a, label {
   font-family: 'Raleway', sans-serif;
   font-size: 1em;
-  line-height: 1.05em;
+  line-height: 1em;
 }
 
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
   padding: 1% 1% 2%;
+  margin: 2px 4px 4px;
 }
 
-p {
+p, label, span {
   color: $maroon;
 }
+
 span {
-  color: $maroon;
+  font-size: .8em;
+  color: $lt-blue;
 }
 
 a {
@@ -128,13 +137,27 @@ h6 {
             # D. Forms
 \*------------------------------------*/
 form {
-
+  display: block;
+  margin: 5% auto;
+  padding: 2% 4% 5%;
 }
 
 
 /*------------------------------------*\
             # F. Buttons
 \*------------------------------------*/
+.btn {
+  cursor: pointer;
+}
+
+.btn.blue {
+  background-color: $lt-blue;
+
+  &:hover {
+    background-color: $lt-blue-active;
+  }
+}
+
 
 /*------------------------------------*\
             # G. Colors
