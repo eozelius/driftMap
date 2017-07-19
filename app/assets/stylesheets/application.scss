@@ -9,6 +9,7 @@
  *   E. Buttons
  *   G. Navbar
  *   H. Modals
+ *   I. class keywords
  *
 
  */
@@ -83,7 +84,7 @@ p, span, a, label {
 h1,h2,h3,h4,h5,h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
-  padding: 1% 1% 2%;
+  padding: 1%;
   margin: 2px 4px 4px;
 }
 
@@ -102,6 +103,7 @@ a {
 
   &:hover {
     color: $lt-blue-active !important;
+    text-decoration: none !important;
   }
 }
 
@@ -140,8 +142,17 @@ h6 {
 \*------------------------------------*/
 form {
   display: block;
-  margin: 5% auto;
+  margin: 2% auto 5%;
   padding: 2% 4% 5%;
+}
+
+form.small-form {
+  width: 40%;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+form.medium-form {
 }
 
 
@@ -159,7 +170,6 @@ form {
     background-color: $lt-blue-active;
   }
 }
-
 
 /*------------------------------------*\
             # G. NavBar
@@ -199,3 +209,25 @@ form {
 /*------------------------------------*\
             # H. Modals
 \*------------------------------------*/
+
+/*------------------------------------*\
+         # I. class keywords
+\*------------------------------------*/
+.center {
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.hidden { display: none; }
+
+.clear-fix {
+  width: 100%;
+  display: block;
+  height: 1px;
+  background-color: transparent;
+}
+
+.pull-right { float: right }
+.pull-left { float: left }
+

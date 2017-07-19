@@ -1,8 +1,11 @@
 <% provide(:title, "log in") %>
 <div id="sessions_new" class="sessions">
-  <%= form_for :session, url: login_path do |f| %>
+  <div class="center">
     <h5>Sign in to driftMaps</h5>
+    <p>plot your journey</p>
+  </div>
 
+  <%= form_for :session, html: {class: 'small-form'}, url: login_path do |f| %>
     <div class="form-group">
       <%= f.label :email %>
       <%= f.text_field :email, autofocus: true, class: 'form-control' %>
@@ -20,11 +23,11 @@
       </label>
     </div>
 
-    <%= f.submit 'sign in', class: 'btn blue' %>
+    <%= f.submit 'sign in', class: 'btn blue center' %>
   <% end %>
 
   <div class="first-timer">
-    <p class="title">
+    <p>
       First time here?
       <a href="/signup">
         sign up

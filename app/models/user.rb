@@ -10,7 +10,6 @@ class User < ApplicationRecord
   validates :first_name,  presence: true, :length => { minimum: 2, maximum: 55 }
   validates :last_name,   presence: true, :length => { minimum: 2, maximum: 55 }
   validates :email,       presence: true, :length => { minimum: 7, maximum: 255 }, :format => { with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i }, uniqueness: { case_sensitive: false }
-  validates :description, presence: true
   validates :password,    presence: true, length: { minimum: 6 }, allow_nil: true
   validates :globe,       presence: true
 
