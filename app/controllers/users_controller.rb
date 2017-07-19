@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 
 
     if @user.save
-      # @user.send_activation_email
+      @user.send_activation_email
       flash[:info] = "welcome to driftMaps"
       log_in @user
 
