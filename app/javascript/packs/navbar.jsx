@@ -1,7 +1,3 @@
-// Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
-// like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
-// of the page.
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import PropTypes from 'prop-types'
@@ -9,11 +5,30 @@ import PropTypes from 'prop-types'
 class NavBar extends React.Component {
   render(){
     let rightNav = null;
-    if(true){
+
+    if(false){
       rightNav = (
         <a href="#">
           <img className="profile-pic-thumbnail" src="https://driftmap.s3.amazonaws.com/uploads/user/profile_pic/1/profile.jpg" />
         </a>
+      )
+    } else {
+      rightNav = (
+        <ul className="nav navbar-nav navbar-right">
+          <li>
+            <a href="/login">
+              sign in
+            </a>
+          </li>
+          <li>
+            <span> or </span>
+          </li>
+          <li>
+            <a href="/signup">
+              sign up
+            </a>
+          </li>
+        </ul>
       )
     }
 
@@ -39,6 +54,5 @@ class NavBar extends React.Component {
 
 NavBar.defaultProps = {}
 NavBar.propTypes = {}
-
 
 document.addEventListener('DOMContentLoaded', ReactDOM.render(<NavBar />, document.getElementById('navbar-container')))

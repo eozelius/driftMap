@@ -172,6 +172,28 @@ form {
     border-radius: 4px;
     margin-top: 2.5px;
   }
+
+  ul.navbar-right {
+    height: 40px;
+
+    li {
+      line-height: 40px;
+
+      span {
+        margin: 0 10px;
+        color: $lt-grey;
+      }
+
+      a {
+        &:hover {
+          text-decoration:none;
+        }
+      }
+    }
+  }
+
+  a {
+  }
 }
 
 /*------------------------------------*\
