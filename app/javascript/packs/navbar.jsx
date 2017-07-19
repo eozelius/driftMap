@@ -19,11 +19,7 @@ class NavBar extends React.Component {
             <a href="/login">
               sign in
             </a>
-          </li>
-          <li>
             <span> or </span>
-          </li>
-          <li>
             <a href="/signup">
               sign up
             </a>
