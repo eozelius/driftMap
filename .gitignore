@@ -23,4 +23,6 @@
 .byebug_history
 /public/packs
 /node_modules
-.idea/*
+.idea/workspace.xml
+.idea/inspectionProfiles/
+*.DS_Store
