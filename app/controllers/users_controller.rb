@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    
+
     # Set default attr's #####
     # GLOBE
     globe = Globe.new(

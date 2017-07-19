@@ -10,6 +10,7 @@
  *   G. Navbar
  *   H. Modals
  *   I. class keywords
+ *   J. flash messages
  *
 
  */
@@ -231,3 +232,16 @@ form.medium-form {
 .pull-right { float: right }
 .pull-left { float: left }
 
+
+
+/*------------------------------------*\
+          # J. Flash Messages
+\*------------------------------------*/
+.alert {
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  top: 2%;
+  height: 50px;
+  z-index: 999;
+}
