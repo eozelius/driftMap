@@ -6,7 +6,7 @@
   </div>
 
   <%= form_for :session, html: {class: 'small-form'}, url: login_path do |f| %>
-    <div class="form-group">
+    <div class="form-group" style="margin-top: 30px;">
       <%= f.label :email %>
       <%= f.text_field :email, autofocus: true, class: 'form-control' %>
     </div>

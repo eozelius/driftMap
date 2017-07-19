@@ -8,9 +8,20 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
+    
+    # Set default attr's #####
+    # GLOBE
+    globe = Globe.new(
+      lat: 0.924206230200376,
+      lng: -34.2400771379471,
+      zoom: 5
+    )
+    @user.globe = globe
+    @user.description = "hello, my name is #{@user.first_name}, and I like to ..."
+
 
     if @user.save
-      @user.send_activation_email
+      # @user.send_activation_email
       flash[:info] = "welcome to driftMaps"
       log_in @user
 
