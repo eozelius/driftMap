@@ -14,6 +14,8 @@ gem 'uglifier', '>= 1.3.0'
 gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
+gem 'geocoder'
+
 
 # Bootstrap
 gem 'sprockets-rails'
