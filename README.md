@@ -2,14 +2,14 @@
 
 driftMaps.com integrates all the adventures of world exploration into an expressive cartographic experience.
 
-How does it work?
- * driftMaps.com is organized into <span>Journeys</span> and <span>Way Points.</span>  For example a trek across South America, will have many stops along the way in cities, towns or parks.
+* How does it work?
+     - driftMaps.com is organized into <span>Journeys</span> and <span>Way Points.</span>  For example a trek across South America, will have many stops along the way in cities, towns or parks.
 
-What kind of stuff will a Way Point include?
- * Way Point content creation is organized into 3 categories: Photos, Friends and Journals.
+- What kind of stuff will a Way Point include?
+    * Way Point content creation is organized into 3 categories: Photos, Friends and Journals.
 
-Interested in Contributing?
- * Great!  Take a look around, and send me an email.
+- Interested in Contributing?
+    * Great!  Take a look around, and send me an email.
 
 # Technology Stack
  * Rails 5.1.2
