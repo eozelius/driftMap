@@ -242,7 +242,7 @@ bogota.save!
 gdn.save
 
 #################################
-#       James Thiago            #
+#       James kiefner            #
 #################################
 james = User.new(
   first_name: 'James',
