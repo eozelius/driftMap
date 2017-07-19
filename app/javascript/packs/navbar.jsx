@@ -8,6 +8,15 @@ import PropTypes from 'prop-types'
 
 class NavBar extends React.Component {
   render(){
+    let rightNav = null;
+    if(true){
+      rightNav = (
+        <a href="#">
+          <img className="profile-pic-thumbnail" src="https://driftmap.s3.amazonaws.com/uploads/user/profile_pic/1/profile.jpg" />
+        </a>
+      )
+    }
+
     return (
       <nav className="navbar navbar-toggleable-md navbar-light navbar-inverse bg-inverse">
         <button className="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,6 +30,7 @@ class NavBar extends React.Component {
               <a className="nav-link" href="#">read me <span className="sr-only">(current)</span></a>
             </li>
           </ul>
+          {rightNav}
         </div>
       </nav>
     )

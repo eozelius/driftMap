@@ -35,7 +35,6 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
-    @driftmap = @user.driftmap
   end
 
   def update
@@ -62,11 +61,16 @@ class UsersController < ApplicationController
       :first_name,
       :last_name,
       :email,
+      :description,
       :password,
       :password_confirmation,
       :profile_pic,
-      :from,
-      :gps
+      :home_country,
+      :home_state,
+      :home_city,
+      :current_country,
+      :current_state,
+      :current_city
     )
   end
 
@@ -77,7 +81,7 @@ class UsersController < ApplicationController
     if current_user?(@user) || current_user.admin?
       return true
     else
-      flash[:danger] = "You do not have permission to do that. wwjd?"
+      flash[:danger] = "You do not have permission to do that!"
       redirect_to(root_path)
     end
   end

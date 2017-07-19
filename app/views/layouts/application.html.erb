@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>DriftMap</title>
+    <title>driftMaps</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,10 +9,13 @@
   </head>
 
   <body>
+    <div id="logged_in" value="<%= logged_in? %>"></div>
     <div id="navbar-container">
       <%= javascript_pack_tag 'navbar' %>
     </div>
 
-    <%= yield %>
+    <div class="yield-container">
+      <%= yield %>
+    </div>
   </body>
 </html>

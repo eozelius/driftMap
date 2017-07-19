@@ -7,6 +7,8 @@
  *   C. Fonts
  *   D. Forms
  *   E. Buttons
+ *   G. Navbar
+ *   H. Modals
  *
 
  */
@@ -14,6 +16,7 @@
 /*------------------------------------*\
          # 0. Custom Styles Manifest
 \*------------------------------------*/
+@import "home";
 @import "sessions";
 @import "colors";
 
@@ -94,13 +97,12 @@ span {
 }
 
 a {
-  color: $lt-blue-active !important;
+  color: $lt-blue !important;
   cursor: pointer;
 
   &:hover {
-    color: $lt-blue !important;
+    color: $lt-blue-active !important;
   }
-
 }
 
 h1 {
@@ -160,12 +162,18 @@ form {
 
 
 /*------------------------------------*\
-            # G. Colors
+            # G. NavBar
 \*------------------------------------*/
-.maroon {
-  color: $maroon;
+.navbar {
+  .profile-pic-thumbnail {
+    width: 35px;
+    height: 35px;
+    display: inline;
+    border-radius: 4px;
+    margin-top: 2.5px;
+  }
 }
 
-.lt-blue {
-  color: $lt-blue;
-}
+/*------------------------------------*\
+            # H. Modals
+\*------------------------------------*/
