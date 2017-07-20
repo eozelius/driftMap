@@ -1,5 +1,19 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
+  host = 'http://ec2-52-34-131-224.us-west-2.compute.amazonaws.com'
+  config.action_mailer.default_url_options = { host: host }
+  ActionMailer::Base.smtp_settings = {
+    :user_name      => ENV['SENDGRID_USERNAME'],
+    :password       => ENV['SENDGRID_PASSWORD'],
+    :domain         => 'http://ec2-52-34-131-224.us-west-2.compute.amazonaws.com',
+    :address        => 'smtp.sendgrid.net',
+    :port           => '587',
+    :authentication => :plain,
+    :enable_starttls_auto => true
+  }
+
 
   # Code is not reloaded between requests.
   config.cache_classes = true
