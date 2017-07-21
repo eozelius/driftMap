@@ -60,6 +60,14 @@ class User < ApplicationRecord
     update_attribute(:reset_sent_at, Time.zone.now)
   end
 
+  def send_welcome_email
+    UserMailer.welcome_to_driftmap(self).deliver_now
+  end
+
+  def send_password_reset_email
+    UserMailer.password_reset(self).deliver_now
+  end
+
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
   end

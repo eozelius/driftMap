@@ -21,19 +21,9 @@ class UsersController < ApplicationController
 
 
     if @user.save
-      @user.send_activation_email
+      @user.send_welcome_email
       flash[:info] = "welcome to driftMaps"
       log_in @user
-
-      globe = Globe.new(
-        lat: 0.924206230200376,
-        lng: -34.2400771379471,
-        zoom: 5
-      )
-
-      @user.globe = globe
-      @user.save
-
       redirect_to @user
     else
       render 'new'

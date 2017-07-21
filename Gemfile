@@ -15,7 +15,7 @@ gem 'webpacker'
 gem 'bcrypt', '~> 3.1.7'
 gem 'pg'
 gem 'geocoder'
-
+#gem 'cesium', '~> 1.24'
 
 # Bootstrap
 gem 'sprockets-rails'
@@ -24,12 +24,14 @@ gem 'popper_js', '~> 1.9', '>= 1.9.9'
 gem 'tether-rails'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
   gem 'rspec-rails', '~> 3.6.0'
   gem 'web-console'
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 end
 
 group :development do
