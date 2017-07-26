@@ -24,3 +24,4 @@
 Gemfile.lock
 /coverage/.resultset.json
 /coverage/*
+package-lock.json
